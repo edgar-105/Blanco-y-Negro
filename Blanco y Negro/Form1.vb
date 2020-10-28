@@ -4,6 +4,11 @@ Imports System.Drawing.Imaging
 Public Class Form1
 
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        setBackgroundImageOnGrayScale()
+
+    End Sub
+
+    Private Sub setBackgroundImageOnGrayScale()
         Dim dlg As OpenFileDialog = New OpenFileDialog()
         dlg.Filter = "Image files (*.BMP, *.JPG, *.GIF, *.PNG)|*.bmp;*.jpg;*.gif;*.png"
         If dlg.ShowDialog() = DialogResult.OK Then
@@ -34,7 +39,6 @@ Public Class Form1
             g.Dispose()
             Me.BackgroundImage = bm
         End If
-        'test new changed made for me
     End Sub
 
     Private Sub Form1_Paint(ByVal sender As Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles MyBase.Paint
