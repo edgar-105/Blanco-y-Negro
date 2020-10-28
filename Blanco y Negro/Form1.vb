@@ -1,5 +1,5 @@
-﻿Imports System.Drawing.Imaging
-Imports System.Drawing.Drawing2D
+﻿Imports System.Drawing.Drawing2D
+Imports System.Drawing.Imaging
 
 Public Class Form1
 
@@ -21,10 +21,10 @@ Public Class Form1
             'Gilles Khouzams colour corrected grayscale shear
 
             Dim cm As ColorMatrix = New ColorMatrix(New Single()() _
-                 {New Single() {0.3, 0.3, 0.3, 0, 0}, _
-                New Single() {0.59, 0.59, 0.59, 0, 0}, _
-                New Single() {0.11, 0.11, 0.11, 0, 0}, _
-                New Single() {0, 0, 0, 1, 0}, _
+                 {New Single() {0.3, 0.3, 0.3, 0, 0},
+                New Single() {0.59, 0.59, 0.59, 0, 0},
+                New Single() {0.11, 0.11, 0.11, 0, 0},
+                New Single() {0, 0, 0, 1, 0},
                 New Single() {0, 0, 0, 0, 1}})
 
 
@@ -34,6 +34,7 @@ Public Class Form1
             g.Dispose()
             Me.BackgroundImage = bm
         End If
+        'test new changed made for me
     End Sub
 
     Private Sub Form1_Paint(ByVal sender As Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles MyBase.Paint
